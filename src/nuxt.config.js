@@ -34,6 +34,11 @@ export default
         ]
     },
 
+    plugins: [
+        '~/plugins/directives/numericOnly.js',
+        '~/plugins/lodash.js'
+    ],
+
     modules:
     [
         "@nuxtjs/proxy",

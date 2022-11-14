@@ -31,16 +31,23 @@ module.exports = {
             24: "24px",
             26: "26px",
             28: "28px",
+            29: "29px",
             30: "30px",
             32: "32px",
             34: "34px",
-            36: "36px"
+            36: "36px",
+            40: "40px",
+            50: "50px"
         },
         colors: {
             primary   : "#0F4471",
             secondary : "#EEF5FF",
 
-            gray: "#F8F8F8",
+            gray: {
+                200: "#DFDFDF",
+                300: "#A0A3BD",
+                500: "#F8F8F8"
+            },
             red: "#E02025",
 
             text: {

@@ -1,11 +1,18 @@
 <template>
-    <div>
-        <Nuxt />
-    </div>
+  <div>
+    <TheHeader />
+    <Nuxt />
+  </div>
 </template>
 
 <script>
-export default {}
+
+import TheHeader from "../components/the-header/the-header";
+export default {
+  components: {
+    TheHeader
+  },
+}
 </script>
 
 <style lang="scss">

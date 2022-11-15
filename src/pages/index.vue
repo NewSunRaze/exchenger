@@ -38,7 +38,6 @@ export default {
     return {
     }
   },
-
   computed: {
     ...mapGetters({ currency: 'currency' }),
   },

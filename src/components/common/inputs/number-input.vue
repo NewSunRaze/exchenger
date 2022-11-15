@@ -12,16 +12,19 @@
         "
         :value="value"
         :placeholder="placeholder"
+        v-numeric-only
         @input="onInput($event.target.value)"
     >
   </div>
 </template>
 <script>
+import BaseInput from './base-input'
 
 const DEBOUNCE_TIME = 500
 
 export default {
-  name: 'BaseInput',
+  name: 'NumberInput',
+  extends: BaseInput,
   props: {
     label: {
       type: String,
@@ -32,28 +35,6 @@ export default {
     },
     placeholder: {
       type: String
-    },
-    numeric: {
-      type: Boolean,
-      default: false
-    }
-  },
-  watch: {
-    'value': {
-      handler(val) {
-        this.oninput(val)
-      },
-    },
-  },
-  mounted() {
-    this.oninput = this.lodash.debounce(this.onInput, DEBOUNCE_TIME)
-  },
-  beforeDestroy() {
-    this.oninput.cancel()
-  },
-  methods:{
-    onInput(value) {
-      this.$emit('input', value)
     }
   }
 }

@@ -14,11 +14,10 @@
       placeholder="Введите название или код"
       @input="oninput"
     />
-    <base-input
+    <number-input
         class="my-10"
         v-model="form.amount"
         label="Количество"
-        numeric
         placeholder="Введите число"
         @input="oninput"
     />
@@ -29,13 +28,15 @@
 
 <script>
 import BaseInput from '../../common/inputs/base-input'
+import NumberInput from '../../common/inputs/number-input'
 import CalculatorResult from './calculator-result'
 import CalculatorError from './calculator-error'
 
 export default {
-  name: 'calculator',
+  name: 'Calculator',
   components: {
     BaseInput,
+    NumberInput,
     CalculatorResult,
     CalculatorError
   },

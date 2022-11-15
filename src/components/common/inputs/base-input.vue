@@ -3,9 +3,10 @@
     <span
         v-if="label"
         class="text-14 font-medium mb-5
-        2xl:text-16
-        "
-    >{{ label }}</span>
+        2xl:text-16"
+    >
+      {{ label }}
+    </span>
     <input
         class="input px-7 py-7 rounded border border-gray-200 placeholder-gray-300 text-12
         2xl:text-14
@@ -28,10 +29,12 @@ export default {
       default: ''
     },
     value: {
+      type: [String, Number],
       required: true
     },
     placeholder: {
-      type: String
+      type: String,
+      default: ''
     },
     numeric: {
       type: Boolean,
@@ -39,7 +42,7 @@ export default {
     }
   },
   watch: {
-    'value': {
+    value: {
       handler(val) {
         this.oninput(val)
       },

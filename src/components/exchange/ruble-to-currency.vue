@@ -1,13 +1,10 @@
 <template>
-  <div class="flex flex-col p-10 bg-gray-500 rounded-3xl drop-shadow-md w-[330px]
+  <div class="flex flex-col p-10 bg-gray-500 rounded-3xl cursor-pointer hover:drop-shadow-md w-[330px]
   md:w-[344px]
   xl:w-[370px]"
   >
     <div class="w-4/5 mb-10">
-      <img :src="isOdd
-        ? require('~/assets/images/icons/money-icon-blue.svg')
-        : require('~/assets/images/icons/money-icon-red.svg')
-        " alt="money"
+      <img :src="imageSource" alt="money"
       >
     </div>
     <h2 class="mb-10 text-primary font-medium">{{ CharCode }}</h2>
@@ -54,8 +51,12 @@ export default {
       type: Number,
       required: true
     },
-    isOdd: {
-      type: Boolean,
+    isOdd: Boolean,
+  },
+  computed:{
+    imageSource() {
+      const imageName = this.isOdd ? 'money-icon-blue' : 'money-icon-red'
+      return require(`~/assets/images/icons/${imageName}.svg`)
     }
   }
 }

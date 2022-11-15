@@ -14,7 +14,7 @@
       <ul>
         <li
           v-for="(contentItem, index) in listContent"
-          :key="index"
+          :key="`content${index}`"
           class="text-13 relative mb-5 px-7
           before:block before:absolute before:border-2 before:border-red before:w-3 before:h-3 before:rounded-full before:absolute before:top-1/3 before:left-0
           md:mb-8 md:mb-6
@@ -39,7 +39,7 @@
               xl:w-[116px] xl:h-[116px] xl:rounded-none xl:first:rounded-none
               2xl:w-[146px] 2xl:h-[146px]"
               v-for="(image, index) in images"
-              :key="index"
+              :key="`image${index}`"
               :src="require(`~/assets/images/${image.name}`)"
               :alt="`image-№${index}`"
           >

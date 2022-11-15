@@ -50,7 +50,7 @@ export default {
     return {
       form: {
         firstCurrency: '',
-        secondCurrency: '',
+        secondCurrency: null,
         amount: ''
       },
       firstCurrencyData: {},
@@ -76,7 +76,6 @@ export default {
     },
 
     calculate(firstCurrency, secondCurrency) {
-
       this.firstCurrencyData = this.findCurrency(firstCurrency)
       this.secondCurrencyData = this.findCurrency(secondCurrency)
       if(!this.firstCurrencyData?.Name || !this.secondCurrencyData?.Name) {

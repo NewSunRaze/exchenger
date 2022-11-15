@@ -20,8 +20,6 @@
 <script>
 import BaseInput from './base-input'
 
-const DEBOUNCE_TIME = 500
-
 export default {
   name: 'NumberInput',
   extends: BaseInput,
@@ -31,7 +29,8 @@ export default {
       default: ''
     },
     value: {
-      required: true
+      type: Number,
+      required: true,
     },
     placeholder: {
       type: String

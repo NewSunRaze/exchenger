@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-start rounded-none bg-secondary px-5 py-10
+  <div class="flex flex-col items-start rounded-none bg-gray-500 px-5 py-10
        md:items-center md:p-10 md:rounded-3xl md:flex-row"
   >
     <img class="mb-10 md:mb-0 mr-10" src="~/assets/images/icons/info-blue.svg" alt="info">

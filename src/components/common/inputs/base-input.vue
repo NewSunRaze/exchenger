@@ -29,7 +29,6 @@ export default {
       default: ''
     },
     value: {
-      type: [String, Number],
       required: true
     },
     placeholder: {
